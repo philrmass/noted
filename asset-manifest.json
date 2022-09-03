@@ -1,0 +1,15 @@
+{
+  "bundle.css": "bundle.03029.css",
+  "bundle.js": "bundle.9e097.esm.js",
+  "bundle.js.map": "bundle.9e097.esm.js.map",
+  "polyfills.js": "polyfills.830ba.esm.js",
+  "polyfills.js.map": "polyfills.830ba.esm.js.map",
+  "assets/.DS_Store": "assets/.DS_Store",
+  "assets/favicon.ico": "assets/favicon.ico",
+  "assets/icon.png": "assets/icon.png",
+  "manifest.json": "manifest.json",
+  "sw-esm.js": "sw-esm.js",
+  "sw-esm.js.map": "sw-esm.js.map",
+  "sw.js": "sw.js",
+  "sw.js.map": "sw.js.map"
+}

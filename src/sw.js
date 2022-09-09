@@ -3,9 +3,9 @@ import { getFiles, setupPrecaching, setupRouting } from 'preact-cli/sw/';
 setupRouting();
 
 const files = getFiles();
-const local = files.map((file) => ({ ...file, url: `/noted/${file.url}` }));
+const pathed = files.map((file) => ({ ...file, url: `noted/${file.url}` }));
 console.log('files', files);
-console.log('local', local);
+console.log('pathed', pathed);
 
-const used = files;
+const used = pathed;
 setupPrecaching(used);

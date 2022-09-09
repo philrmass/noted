@@ -6,4 +6,4 @@ const files = getFiles();
 const local = files.map((file) => ({ ...file, url: `/noted/${file.url}` }));
 console.log('files', files);
 console.log('local', local);
-setupPrecaching(files);
+setupPrecaching(local);

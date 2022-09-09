@@ -4,5 +4,6 @@ setupRouting();
 
 const files = getFiles();
 const local = files.map((file) => ({ ...file, url: `/noted/${file.url}` }));
-self.console.log('local', local);
+console.log('files', files);
+console.log('local', local);
 setupPrecaching(files);

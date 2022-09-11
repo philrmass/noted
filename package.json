@@ -1,12 +1,12 @@
 {
   "private": true,
   "name": "noted",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "license": "MIT",
   "scripts": {
     "build": "preact build",
     "deploy": "gh-pages -d build",
-    "dev": "preact watch",
+    "dev": "DEV=true preact watch --clear=false",
     "lint": "eslint src",
     "predeploy": "yarn build",
     "serve": "sirv build --port 8080 --cors --single"

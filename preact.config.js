@@ -1,14 +1,12 @@
 export default (config, env, helpers) => {
-  const isDev = process.env.NODE_ENV === 'development';
-  //config.output.publicPath = isDev ? '' : '/noted/';
-  //config.output.publicPath = '/';
-  config.output.publicPath = '/noted/';
-  //console.log("CONFIG", isDev);
+  const isDev = Boolean(process.env.DEV);
+  config.output.publicPath = isDev ? '' : '/noted/';
+  console.log(`Using ${isDev ? 'dev' : 'prod'} publicPath='${config.output.publicPath}'`);
 
   // use the public path in your app as 'process.env.PUBLIC_PATH'
   config.plugins.push(
     new helpers.webpack.DefinePlugin({
-      'process.env.PUBLIC_PATH': JSON.stringify(config.output.publicPath || '/')
-    })
+      'process.env.PUBLIC_PATH': JSON.stringify(config.output.publicPath || '/'),
+    }),
   );
 };

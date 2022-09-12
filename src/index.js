@@ -1,11 +1,13 @@
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import Home from './components/Home';
+import './reset';
 import './style';
-import { version } from '../package.json';
 
 export default function App() {
   return (
-    <div>
-      <h1>Hello, World!</h1>
-      <div>{`v${version}`}</div>
-    </div>
+    <Provider store={store}>
+      <Home />
+    </Provider>
   );
 }

@@ -1,0 +1,43 @@
+/*
+.notes {
+  margin-bottom: var(--size6);
+}
+
+.appName {
+  --logoSize: var(--size4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--size1) 0;
+  color: var(--button);
+  font-size: var(--logoSize);
+}
+
+.logo {
+  width: var(--logoSize);
+  height: var(--logoSize);
+  margin-right: var(--size0);
+}
+
+.parent {
+  min-height: var(--noteHeight);
+  margin: var(--size0);
+  margin-bottom: var(--size1);
+  display: flex;
+  border: var(--size0) solid var(--highlight);
+}
+
+.handle {
+  flex-shrink: 0;
+  width: var(--handleWidth);
+  background: var(--shadeLight);
+}
+
+.text {
+  flex-grow: 1;
+  padding: var(--size1);
+  user-select: none;
+  white-space: pre-wrap;
+}
+*/

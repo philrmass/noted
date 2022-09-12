@@ -1,0 +1,37 @@
+/*
+.button {
+  width: var(--size5);
+  height: var(--size5);
+  border-radius: 50%;
+  background: var(--button);
+  fill: var(--textButton);
+}
+
+.button:active {
+  filter: brightness(80%);
+}
+
+.add {
+  position: fixed;
+  bottom: var(--size1);
+  right: var(--size1);
+}
+
+.back {
+  position: fixed;
+  bottom: var(--size1);
+  left: var(--size1);
+}
+
+.menu {
+  position: fixed;
+  top: var(--size1);
+  right: var(--size1);
+}
+
+.revert {
+  position: fixed;
+  top: var(--size1);
+  left: var(--size1);
+}
+*/

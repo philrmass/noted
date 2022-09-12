@@ -1,0 +1,108 @@
+/*
+.main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--background);
+  overflow-y: scroll;
+}
+
+.version {
+  position: fixed;
+  bottom: var(--size0);
+  right: var(--size8);
+  font-size: var(--fontSizeSmall);
+  text-shadow: 1px 1px 3px white, -1px 1px 3px white;
+}
+*/
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit
+}
+
+/*
+body, button, div, h1, h2, h3, h4, html, input, ol, ul {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  background-color: transparent;
+  color: inherit;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+ol, ul {
+  list-style: none;
+}
+*/
+
+/*
+:root {
+  --background: #989898;
+  --button: #585858;
+  --dialog: #ffffff;
+  --highlight: #ffffff;
+  --shade: #00000020;
+  --shadeLight: #00000018;
+  --shadeDark: #00000060;
+  --text: #202020;
+  --textLight: #585858;
+  --textButton: #fafafa;
+}
+:root {
+  --fontSize: 1rem;
+  --fontSizeSmall: 0.8rem;
+  --radius: 4px;
+  --radiusLarge: 8px;
+  --size0: 4px;
+  --size1: 8px;
+  --size2: 16px;
+  --size3: 24px;
+  --size4: 32px;
+  --size5: 40px;
+  --size6: 48px;
+  --size7: 56px;
+  --size8: 64px;
+  --size9: 72px;
+  --size10: 80px;
+}
+:root {
+  --fontRegular: 'OpenSans-Regular', 'Helvetica', serif;
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url('../assets/OpenSans-Regular.ttf') format('truetype');
+}
+*/
+html, body {
+  font: 14px/1.21 'Helvetica Neue', arial, sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  text-align: center;
+}
+/*
+:root {
+}
+
+body {
+  --handleWidth: 50px;
+  --noteHeight: calc(3.6em + 2 * var(--size1));
+
+  font-family: var(--fontRegular);
+  font-size: var(--fontSize);
+  line-height: 1.2em;
+}
+*/
+
+
+/*# sourceMappingURL=ssr-bundle.0f0ec.css.map*/

@@ -1,8 +1,7 @@
-/*
 .note {
-  margin-top: var(--size0);
-  margin-right: var(--size1);
-  margin-left: var(--size1);
+  margin-top: var(--size-4);
+  margin-right: var(--size-8);
+  margin-left: var(--size-8);
   user-select: none;
 }
 
@@ -18,4 +17,3 @@
 .contenDragging {
   display: none;
 }
-*/

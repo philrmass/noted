@@ -1,20 +1,16 @@
-/*
 .notes {
-  margin-bottom: var(--size6);
+  margin-bottom: var(--size-48);
 }
 
-*/
 .appName {
   --logoSize: var(--size-32);
 
-  /*
   display: flex;
   justify-content: center;
   align-items: center;
   padding: var(--size1) 0;
   color: var(--button);
   font-size: var(--logoSize);
-  */
 }
 
 .logo {
@@ -23,7 +19,6 @@
   margin-right: var(--size-4);
 }
 
-/*
 .parent {
   min-height: var(--noteHeight);
   margin: var(--size0);
@@ -44,4 +39,3 @@
   user-select: none;
   white-space: pre-wrap;
 }
-*/

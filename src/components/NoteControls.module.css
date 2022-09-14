@@ -1,6 +1,4 @@
 .controls {
-  background: #00000020;
-/*
   width: var(--handleWidth);
   height: var(--noteHeight);
   flex-shrink: 0;
@@ -9,13 +7,11 @@
   justify-content: center;
   align-items: center;
   background: var(--shadeLight);
-  */
 }
 
-/*
 .button {
-  width: var(--size3);
-  height: var(--size3);
+  width: var(--size-24);
+  height: var(--size-24);
   border-radius: 50%;
   background: var(--shade);
   fill: var(--text);
@@ -26,9 +22,9 @@
 }
 
 .icon {
-  margin-top: var(--size1);
-  width: var(--size3);
-  height: var(--size3);
+  margin-top: var(--size-8);
+  width: var(--size-24);
+  height: var(--size-24);
   fill: var(--text);
 }
 
@@ -44,4 +40,3 @@
   line-height: initial;
   margin-bottom: var(--size2);
 }
-*/

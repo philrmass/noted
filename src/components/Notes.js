@@ -1,21 +1,15 @@
-import { useSelector } from 'react-redux';
-/*
-import { useEffect } from 'react';
+//import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-
-import { clearScrollId } from '../redux/notesActions';
+//import { clearScrollId } from '../redux/notesActions';
 import { editNote } from '../redux/uiActions';
-import styles from './Notes.module.css';
 
 import Note from './Note';
-*/
+import styles from './Notes.module.css';
 
 export default function Notes() {
-  const allNotes = useSelector(state => state.notes.all);
-  /*
   const dis = useDispatch();
   const allNotes = useSelector(state => state.notes.all);
-  const scrollId = useSelector(state => state.notes.scrollId);
+  //const scrollId = useSelector(state => state.notes.scrollId);
   const parentIds = useSelector(state => state.ui.parentIds);
   const parentId = parentIds.at(-1) ?? 'root';
   const parent = allNotes[parentId];
@@ -23,6 +17,7 @@ export default function Notes() {
   const ids = parent?.children ?? [];
   const notes = ids.map((id) => allNotes[id]);
 
+  /*
   useEffect(() => {
     if (scrollId) {
       const element = document.getElementById(scrollId);
@@ -33,6 +28,7 @@ export default function Notes() {
       }
     }
   }, [scrollId]);
+  */
 
   const background = parent?.color ?? '#ffffff';
   const parentStyle = { background };
@@ -49,11 +45,11 @@ export default function Notes() {
 
     return (
       <li id={parentId} className={styles.parent} style={parentStyle}>
-        <div className={styles.handle}></div>
+        <div className={styles.handle} />
         <div className={styles.text} onClick={() => dis(editNote(parentId))}>
           {parent?.text}
         </div>
-        <div className={styles.handle}></div>
+        <div className={styles.handle} />
       </li>
     );
   };
@@ -76,12 +72,5 @@ export default function Notes() {
         </li>
       ))}
     </ul>
-  );
-  */
-  return (
-    <>
-      <div>NOTES</div>
-      <div>{JSON.stringify(allNotes)}</div>
-    </>
   );
 }

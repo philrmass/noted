@@ -10,18 +10,16 @@ import {
   UPDATE_NOTE,
 } from './constants';
 */
-/*
-import { getEmptyNote, getNotesDefault } from '../utilities/notes';
-import { saveItem, loadItem } from '../utilities/storage';
-import { inSameMonth } from '../utilities/time';
-*/
+import { _getEmptyNote, getNotesDefault } from '../utilities/notes';
+import { _saveItem, loadItem } from '../utilities/storage';
+//import { inSameMonth } from '../utilities/time';
 
-//const allKey = 'notedAll';
+const allKey = 'notedAll';
 //const lastColorKey = 'notedLastColor';
 //const lastSaveKey = 'notedLastSave';
 
 const defaultState = {
-  all: [], //loadItem(allKey, getNotesDefault()),
+  all: loadItem(allKey, getNotesDefault()),
   /*
   lastColor: loadItem(lastColorKey, null),
   removedNotes: null,

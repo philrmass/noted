@@ -1,10 +1,10 @@
 {
   "private": true,
   "name": "noted",
-  "version": "0.0.15",
+  "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "build": "preact build",
+    "build": "preact build -no-prerender",
     "deploy": "gh-pages -d build",
     "dev": "DEV=true preact watch --clear=false",
     "lint": "eslint src",
@@ -24,6 +24,7 @@
     "sirv-cli": "^1.0.3"
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "gh-pages": "^4.0.0",
     "jest": "^29.0.2",
     "preact": "^10.1.0",

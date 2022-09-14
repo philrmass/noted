@@ -1,0 +1,47 @@
+.controls {
+  background: #00000020;
+/*
+  width: var(--handleWidth);
+  height: var(--noteHeight);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--shadeLight);
+  */
+}
+
+/*
+.button {
+  width: var(--size3);
+  height: var(--size3);
+  border-radius: 50%;
+  background: var(--shade);
+  fill: var(--text);
+}
+
+.button:active {
+  background: var(--shade);
+}
+
+.icon {
+  margin-top: var(--size1);
+  width: var(--size3);
+  height: var(--size3);
+  fill: var(--text);
+}
+
+.count {
+  display: flex;
+  justify-content: center;
+  color: var(--textLight);
+  font-size: 0.8em;
+}
+
+.text {
+  font-size: 1.8em;
+  line-height: initial;
+  margin-bottom: var(--size2);
+}
+*/

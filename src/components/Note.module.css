@@ -1,0 +1,21 @@
+/*
+.note {
+  margin-top: var(--size0);
+  margin-right: var(--size1);
+  margin-left: var(--size1);
+  user-select: none;
+}
+
+.noteDragging {
+  margin-top: var(--noteHeight);
+  height: 0;
+}
+
+.content {
+  display: flex;
+}
+
+.contenDragging {
+  display: none;
+}
+*/

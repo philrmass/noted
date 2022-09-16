@@ -1,0 +1,21 @@
+.background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--size-32);
+  background: var(--shadeDark);
+  z-index: 1;
+}
+
+.dialog {
+  max-width: 450px;
+  flex-grow: 1;
+  padding: var(--size-16);
+  border-radius: var(--radiusLarge);
+  background: var(--dialog);
+}

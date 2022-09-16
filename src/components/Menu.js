@@ -1,18 +1,13 @@
-/*
-import { useState } from 'react';
+import { useState } from 'preact/hooks';
 import { useDispatch, useSelector } from 'react-redux';
-
 import { saveData, loadData } from '../utilities/files';
 import { importNotes, getSaveFilePath } from '../utilities/notes';
 import { setNotes } from '../redux/notesActions';
-import styles from './Menu.module.css';
-
 import BigButton from './BigButton';
 import Dialog from './Dialog';
-*/
+import styles from './Menu.module.css';
 
 export default function Menu({ isOpen, close }) {
-  /*
   const [status, setStatus] = useState('');
   const dis = useDispatch();
   const allNotes = useSelector(state => state.notes.all);
@@ -64,9 +59,5 @@ export default function Menu({ isOpen, close }) {
       </div>
       <BigButton text='Close' onClick={handleClose} />
     </Dialog>
-  );
-  */
-  return (
-    <div>MENU</div>
   );
 }

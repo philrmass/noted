@@ -1,7 +1,6 @@
-/*
 .button {
-  width: var(--size5);
-  height: var(--size5);
+  width: var(--size-40);
+  height: var(--size-40);
   border-radius: 50%;
   background: var(--button);
   fill: var(--textButton);
@@ -13,25 +12,24 @@
 
 .add {
   position: fixed;
-  bottom: var(--size1);
-  right: var(--size1);
+  bottom: var(--size-8);
+  right: var(--size-8);
 }
 
 .back {
   position: fixed;
-  bottom: var(--size1);
-  left: var(--size1);
+  bottom: var(--size-8);
+  left: var(--size-8);
 }
 
 .menu {
   position: fixed;
-  top: var(--size1);
-  right: var(--size1);
+  top: var(--size-8);
+  right: var(--size-8);
 }
 
 .revert {
   position: fixed;
-  top: var(--size1);
-  left: var(--size1);
+  top: var(--size-8);
+  left: var(--size-8);
 }
-*/

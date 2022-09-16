@@ -2,7 +2,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 //import { clearScrollId } from '../redux/notesActions';
 import { editNote } from '../redux/uiActions';
-
 import Note from './Note';
 import styles from './Notes.module.css';
 

@@ -3,7 +3,7 @@
   height: var(--noteHeight);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: var(--size0);
+  padding: var(--size-4);
   background: var(--shadeLight);
   cursor: move;
 }

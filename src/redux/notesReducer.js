@@ -1,37 +1,32 @@
-/*
 import {
   ADD_NOTE,
-  CLEAR_SCROLL_ID,
+  //CLEAR_SCROLL_ID,
   CLOSE_SAVE_DIALOG,
-  MOVE_NOTE,
+  //MOVE_NOTE,
   REMOVE_NOTE,
   REVERT_NOTE,
   SET_NOTES,
   UPDATE_NOTE,
 } from './constants';
-*/
-import { _getEmptyNote, getNotesDefault } from '../utilities/notes';
-import { _saveItem, loadItem } from '../utilities/storage';
-//import { inSameMonth } from '../utilities/time';
+import { getEmptyNote, getNotesDefault } from '../utilities/notes';
+import { saveItem, loadItem } from '../utilities/storage';
+import { inSameMonth } from '../utilities/time';
 
 const allKey = 'notedAll';
-//const lastColorKey = 'notedLastColor';
-//const lastSaveKey = 'notedLastSave';
+const lastColorKey = 'notedLastColor';
+const lastSaveKey = 'notedLastSave';
 
 const defaultState = {
   all: loadItem(allKey, getNotesDefault()),
-  /*
   lastColor: loadItem(lastColorKey, null),
   removedNotes: null,
   removedParentId: null,
   saveDialogIsOpen: false,
-  scrollId: null,
-  */
+  //scrollId: null,
 };
 
 export default function reducer(state = defaultState, action) {
   switch (action.type) {
-    /*
     case ADD_NOTE: {
       const note = getEmptyNote(action.id);
       const all = addNotes(state.all, [note], action.parentId);
@@ -46,16 +41,19 @@ export default function reducer(state = defaultState, action) {
         scrollId,
       };
     }
+    /*
     case CLEAR_SCROLL_ID:
       return {
         ...state,
         scrollId: null,
       };
+      */
     case CLOSE_SAVE_DIALOG:
       return {
         ...state,
         saveDialogIsOpen: false,
       };
+      /*
     case MOVE_NOTE: {
       const parent = state.all[action.parentId];
       const from = parent.children.findIndex(id => id === action.fromId);
@@ -75,6 +73,7 @@ export default function reducer(state = defaultState, action) {
         all,
       };
     }
+    */
     case REMOVE_NOTE: {
       const parent = state.all[action.parentId];
       const children = parent.children.filter(id => id !== action.id);
@@ -133,13 +132,12 @@ export default function reducer(state = defaultState, action) {
         saveDialogIsOpen,
       };
     }
-    */
     default:
+      console.log('notes', action.type);
       return state;
   }
 }
 
-/*
 function addNotes(all, notes, parentId) {
   const parent = all[parentId];
   const children = [...parent.children, notes[0].id];
@@ -175,6 +173,7 @@ function removeProperty(key, obj) {
   return rest;
 }
 
+/*
 function move(list, from, to) {
   if (to < from) {
     const a = list.slice(0, to);
@@ -194,6 +193,7 @@ function move(list, from, to) {
 
   return list;
 }
+*/
 
 function checkSaveDialog() {
   const now = Date.now();
@@ -209,4 +209,3 @@ function findAllChildIds(id, notes) {
   const children = note?.children ?? [];
   return children.reduce((all, childId) => [...all, ...findAllChildIds(childId, notes)], [id]);
 }
-*/

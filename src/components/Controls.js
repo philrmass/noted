@@ -1,22 +1,14 @@
 import { useState } from 'preact/hooks';
-/*
-import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import cln from 'classnames';
-
 import { addNote, revertNote } from '../redux/notesActions';
 import { clearNote, editNote } from '../redux/uiActions';
+import Icon from './Icon';
+import Menu from './Menu';
+import SaveDialog from './SaveDialog';
 import styles from './Controls.module.css';
 
-import Icon from './Icon';
-import SaveDialog from './SaveDialog';
-*/
-import Menu from './Menu';
-
 export default function Controls() {
-  const isOpen = true;
-  const setIsOpen = () => {};
-  /*
   const [isOpen, setIsOpen] = useState(false);
   const dis = useDispatch();
   const parentIds = useSelector(state => state.ui.parentIds);
@@ -50,13 +42,6 @@ export default function Controls() {
       }
       <Menu isOpen={isOpen} close={() => setIsOpen(false)} />
       <SaveDialog />
-    </>
-  );
-  */
-  return (
-    <>
-      <div>CONTROLS</div>
-      <Menu isOpen={isOpen} close={() => setIsOpen(false)} />
     </>
   );
 }

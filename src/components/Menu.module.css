@@ -1,14 +1,12 @@
-/*
 .controls {
-  margin-bottom: var(--size4);
+  margin-bottom: var(--size-32);
 }
 
 .status {
   height: var(--noteHeight);
-  padding: var(--size1);
+  padding: var(--size-8);
   border: 1px solid var(--background);
   border-radius: var(--radius);
-  margin-top: var(--size2);
+  margin-top: var(--size-16);
   overflow-y: scroll;
 }
-*/

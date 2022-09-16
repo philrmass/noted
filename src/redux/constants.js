@@ -1,4 +1,3 @@
-/*
 export const ADD_NOTE = 'ADD_NOTE';
 export const CLEAR_SCROLL_ID = 'CLEAR_SCROLL_ID';
 export const CLOSE_SAVE_DIALOG = 'CLOSE_SAVE_DIALOG';
@@ -13,4 +12,3 @@ export const CLEAR_SCROLL_TARGET = 'CLEAR_SCROLL_TARGET';
 export const EDIT_NOTE = 'EDIT_NOTE';
 export const RECORD_SCROLL = 'RECORD_SCROLL';
 export const SELECT_NOTE = 'SELECT_NOTE';
-*/

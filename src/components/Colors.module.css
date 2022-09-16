@@ -1,0 +1,36 @@
+.main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--size-16);
+  background: var(--background);
+}
+
+.colors {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: var(--size-8);
+}
+
+.color {
+  border-radius: var(--radius);
+}
+
+.current {
+  border: 5px solid var(--button);
+}
+
+.button {
+  padding: var(--size-16) 30%;
+  border-radius: var(--radiusLarge);
+  margin-top: var(--size-16);
+  background: var(--button);
+  fill: var(--textButton);
+  font-size: 10px;
+}

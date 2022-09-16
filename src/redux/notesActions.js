@@ -1,4 +1,3 @@
-/*
 import { v4 as uuidv4 } from 'uuid';
 
 import {
@@ -44,4 +43,3 @@ export function setNotes(all) {
 export function updateNote(id, text, color) {
   return { type: UPDATE_NOTE, id, text, color };
 }
-*/

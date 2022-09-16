@@ -1,28 +1,25 @@
-/*
 import {
   CLEAR_NOTE,
-  CLEAR_SCROLL_TARGET,
+  //CLEAR_SCROLL_TARGET,
   EDIT_NOTE,
-  RECORD_SCROLL,
+  //RECORD_SCROLL,
   SELECT_NOTE,
 } from './constants';
-*/
-import { _saveItem, loadItem } from '../utilities/storage';
+import { saveItem, loadItem } from '../utilities/storage';
 
 const parentIdsKey = 'notedParents';
-//const parentScrollsKey = 'notedScrolls';
+const parentScrollsKey = 'notedScrolls';
 
 const defaultState = {
-  //editingId: null,
+  editingId: null, //???'645b3d98-71de-4f40-94d3-9ee76cc7c651',
   parentIds: loadItem(parentIdsKey, []),
-  //parentScrolls: loadItem(parentScrollsKey, []),
+  parentScrolls: loadItem(parentScrollsKey, []),
   //scroll: null,
   //scrollTarget: null,
 };
 
 export default function reducer(state = defaultState, action) {
   switch (action.type) {
-    /*
     case CLEAR_NOTE: {
       const canClear = state.parentIds.length > 0;
       const parentIds = canClear ? state.parentIds.slice(0, -1) : state.parentIds;
@@ -39,22 +36,26 @@ export default function reducer(state = defaultState, action) {
         scrollTarget,
       };
     }
+    /*
     case CLEAR_SCROLL_TARGET:
       return {
         ...state,
         scrollTarget: null,
       };
+      */
     case EDIT_NOTE: {
       return {
         ...state,
         editingId: action.id,
       };
     }
+    /*
     case RECORD_SCROLL:
       return {
         ...state,
         scroll: action.scroll,
       };
+      */
     case SELECT_NOTE: {
       const scroll = state.scroll ?? 0;
       const parentIds = [...state.parentIds, action.id];
@@ -68,8 +69,8 @@ export default function reducer(state = defaultState, action) {
         parentScrolls,
       };
     }
-    */
     default:
+      console.log('ui ', action.type);
       return state;
   }
 }

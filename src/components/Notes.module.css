@@ -3,12 +3,12 @@
 }
 
 .appName {
-  --logoSize: var(--size-32);
+  --logoSize: var(--size-40);
 
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--size1) 0;
+  padding: var(--size-8) 0;
   color: var(--button);
   font-size: var(--logoSize);
 }
@@ -21,10 +21,10 @@
 
 .parent {
   min-height: var(--noteHeight);
-  margin: var(--size0);
-  margin-bottom: var(--size1);
+  margin: var(--size-4);
+  margin-bottom: var(--size-8);
   display: flex;
-  border: var(--size0) solid var(--highlight);
+  border: var(--size-4) solid var(--highlight);
 }
 
 .handle {
@@ -35,7 +35,7 @@
 
 .text {
   flex-grow: 1;
-  padding: var(--size1);
+  padding: var(--size-8);
   user-select: none;
   white-space: pre-wrap;
 }

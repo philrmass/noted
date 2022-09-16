@@ -1,12 +1,10 @@
-//import { useState } from 'react';
-//import { useDispatch } from 'react-redux';
+import { useState } from 'preact/hooks';
+import { useDispatch } from 'react-redux';
 import cln from 'classnames';
-//import { editNote, selectNote } from '../redux/uiActions';
+import { editNote, selectNote } from '../redux/uiActions';
 import styles from './NoteText.module.css';
 
 export default function NoteText({ id, text, setText }) {
-  const isOpening = false;
-  /*
   const [start, setStart] = useState(0);
   const [_, setTimer] = useState(null);
   const [y, setY] = useState(null);
@@ -31,9 +29,7 @@ export default function NoteText({ id, text, setText }) {
       return setTimeout(() => setIsOpening(true), longPressMs);
     });
   };
-  */
 
-  /*
   const handleEnd = (e) => {
     const time = Date.now() - start;
 
@@ -49,9 +45,7 @@ export default function NoteText({ id, text, setText }) {
       setTimeout(() => dis(selectNote(id)), 0);
     }
   };
-  */
 
-  /*
   const handleMove = (e) => {
     const ey = e.clientY ?? e.touches[0].clientY;
     const dy = Math.abs(ey - y);
@@ -66,9 +60,7 @@ export default function NoteText({ id, text, setText }) {
       });
     }
   };
-  */
 
-  /*
   if (isEditing) {
     return (
       <textarea
@@ -79,7 +71,6 @@ export default function NoteText({ id, text, setText }) {
       />
     );
   }
-  */
 
   const textStyles = cln({
     [styles.text]: true,
@@ -89,13 +80,13 @@ export default function NoteText({ id, text, setText }) {
   return (
     <div
       className={textStyles}
-      //onTouchStart={handleStart}
-      //onTouchEnd={handleEnd}
-      //onTouchMove={handleMove}
-      //onMouseDown={handleStart}
-      //onMouseUp={handleEnd}
-      //onMouseMove={handleMove}
-      //onTransitionEnd={() => dis(editNote(id))}
+      onTouchStart={handleStart}
+      onTouchEnd={handleEnd}
+      onTouchMove={handleMove}
+      onMouseDown={handleStart}
+      onMouseUp={handleEnd}
+      onMouseMove={handleMove}
+      onTransitionEnd={() => dis(editNote(id))}
     >
       {text}
     </div>

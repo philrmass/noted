@@ -6,9 +6,9 @@ import { getIconSource } from './Icon.js';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearScrollTarget, recordScroll } from '../redux/uiActions';
 import Editor from './Editor';
-//import { DndProvider } from 'react-dnd';
-//import { TouchBackend } from 'react-dnd-touch-backend';
-//import NoteDragLayer from './NoteDragLayer';
+import { DndProvider } from 'react-dnd';
+import { TouchBackend } from 'react-dnd-touch-backend';
+import NoteDragLayer from './NoteDragLayer';
 
 import styles from './Home.module.css';
 
@@ -30,15 +30,20 @@ export default function Home() {
   };
 
   if (editingId) {
-    return <Editor />;
+    return (
+      <>
+        <Editor />;
+        {getIconSource()}
+      </>
+    );
   }
 
   return (
     <main ref={mainRef} className={styles.main} onScroll={handleScroll}>
-      {/*<DndProvider backend={TouchBackend}>*/}
-      <Notes />
-      {/*<NoteDragLayer />*/}
-      {/*</DndProvider>*/}
+      <DndProvider backend={TouchBackend}>
+        <Notes />
+        <NoteDragLayer />
+      </DndProvider>
       <Controls />
       <div className={styles.version}>{`v${version}`}</div>
       {getIconSource()}

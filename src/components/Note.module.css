@@ -6,7 +6,7 @@
 }
 
 .noteDragging {
-  margin-top: var(--noteHeight);
+  margin-top: calc(var(--noteHeight) + 2 * var(--size-4));
   height: 0;
 }
 

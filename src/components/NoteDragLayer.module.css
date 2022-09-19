@@ -1,0 +1,7 @@
+.note {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: calc(100vw - var(--size-16) - var(--handleWidth));
+  display: flex;
+}

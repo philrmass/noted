@@ -1,23 +1,19 @@
-//import { useDispatch } from 'react-redux';
-//import { useDrag, useDrop } from 'react-dnd';
+import { useDispatch } from 'react-redux';
+import { useDrag, useDrop } from 'react-dnd';
 import cln from 'classnames';
-//import { moveNote } from '../redux/notesActions';
+import { moveNote } from '../redux/notesActions';
 import NoteControls from './NoteControls';
 import NoteHandle from './NoteHandle';
 import NoteText from './NoteText';
 import styles from './Note.module.css';
 
 export default function Note({ parentId, note }) {
-  //const type = 'Note';
-  //const dis = useDispatch();
+  const type = 'Note';
+  const dis = useDispatch();
   const id = note.id;
   const color = note.color;
   const text = note.text;
 
-  const isDragging = false;
-  const drag = null;
-  const drop = null;
-  /*
   const [{ isDragging }, drag] = useDrag(() => ({
     type,
     item: { id, color, text },
@@ -34,7 +30,6 @@ export default function Note({ parentId, note }) {
       }
     },
   });
-  */
 
   const noteClasses = cln({
     [styles.note]: true,

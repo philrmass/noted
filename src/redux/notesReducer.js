@@ -2,7 +2,7 @@ import {
   ADD_NOTE,
   CLEAR_SCROLL_ID,
   CLOSE_SAVE_DIALOG,
-  //MOVE_NOTE,
+  MOVE_NOTE,
   REMOVE_NOTE,
   REVERT_NOTE,
   SET_NOTES,
@@ -51,7 +51,6 @@ export default function reducer(state = defaultState, action) {
         ...state,
         saveDialogIsOpen: false,
       };
-      /*
     case MOVE_NOTE: {
       const parent = state.all[action.parentId];
       const from = parent.children.findIndex(id => id === action.fromId);
@@ -71,7 +70,6 @@ export default function reducer(state = defaultState, action) {
         all,
       };
     }
-    */
     case REMOVE_NOTE: {
       const parent = state.all[action.parentId];
       const children = parent.children.filter(id => id !== action.id);
@@ -171,7 +169,6 @@ function removeProperty(key, obj) {
   return rest;
 }
 
-/*
 function move(list, from, to) {
   if (to < from) {
     const a = list.slice(0, to);
@@ -191,7 +188,6 @@ function move(list, from, to) {
 
   return list;
 }
-*/
 
 function checkSaveDialog() {
   const now = Date.now();

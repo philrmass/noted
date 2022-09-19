@@ -1,6 +1,6 @@
 import {
   ADD_NOTE,
-  //CLEAR_SCROLL_ID,
+  CLEAR_SCROLL_ID,
   CLOSE_SAVE_DIALOG,
   //MOVE_NOTE,
   REMOVE_NOTE,
@@ -22,7 +22,7 @@ const defaultState = {
   removedNotes: null,
   removedParentId: null,
   saveDialogIsOpen: false,
-  //scrollId: null,
+  scrollId: null,
 };
 
 export default function reducer(state = defaultState, action) {
@@ -41,13 +41,11 @@ export default function reducer(state = defaultState, action) {
         scrollId,
       };
     }
-    /*
     case CLEAR_SCROLL_ID:
       return {
         ...state,
         scrollId: null,
       };
-      */
     case CLOSE_SAVE_DIALOG:
       return {
         ...state,

@@ -1,6 +1,6 @@
-//import { useEffect } from 'react';
+import { useEffect } from 'preact/hooks';
 import { useDispatch, useSelector } from 'react-redux';
-//import { clearScrollId } from '../redux/notesActions';
+import { clearScrollId } from '../redux/notesActions';
 import { editNote } from '../redux/uiActions';
 import Note from './Note';
 import styles from './Notes.module.css';
@@ -8,7 +8,7 @@ import styles from './Notes.module.css';
 export default function Notes() {
   const dis = useDispatch();
   const allNotes = useSelector(state => state.notes.all);
-  //const scrollId = useSelector(state => state.notes.scrollId);
+  const scrollId = useSelector(state => state.notes.scrollId);
   const parentIds = useSelector(state => state.ui.parentIds);
   const parentId = parentIds.at(-1) ?? 'root';
   const parent = allNotes[parentId];
@@ -16,7 +16,6 @@ export default function Notes() {
   const ids = parent?.children ?? [];
   const notes = ids.map((id) => allNotes[id]);
 
-  /*
   useEffect(() => {
     if (scrollId) {
       const element = document.getElementById(scrollId);
@@ -26,8 +25,7 @@ export default function Notes() {
         dis(clearScrollId());
       }
     }
-  }, [scrollId]);
-  */
+  }, [scrollId, dis]);
 
   const background = parent?.color ?? '#ffffff';
   const parentStyle = { background };

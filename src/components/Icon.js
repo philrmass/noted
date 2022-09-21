@@ -13,8 +13,7 @@ export function getIconSource() {
         <svg id="back" viewBox="0 0 100 100">
           <path d="M33 50 l25 25 l4 -4 l-21 -21 l21 -21 l-4 -4 l-25 25" />
         </svg>
-        <svg id="blank" viewBox="0 0 100 100">
-        </svg>
+        <svg id="blank" viewBox="0 0 100 100" />
         <svg id="children" viewBox="0 0 100 100">
           <path d="M10 25 h80 v6 h-50 l5 10 h45 v6 h-42 l5 10 h37 v6 h-40.8 l-16 -32 h-23.2 v-6" />
         </svg>
@@ -33,6 +32,9 @@ export function getIconSource() {
           <g transform="rotate(-135 0 0)">
             <path d="M25 0 A25 25 0 1 1 0 -25 v6 A19 19 0 1 0 19 0 h-10 l13 -13 l13 13 h10" />
           </g>
+        </svg>
+        <svg id="up" viewBox="0 0 100 100">
+          <path d="M50 25 l25 25 l-5 5 l-21 -21 l-21 21 l-5 -5 M52 27 v50 h-6 v-50" />
         </svg>
       </defs>
     </svg>

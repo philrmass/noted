@@ -9,7 +9,7 @@
   background: var(--shadeLight);
 }
 
-.button {
+.controls button {
   width: var(--size-24);
   height: var(--size-24);
   border-radius: 50%;
@@ -17,7 +17,7 @@
   fill: var(--text);
 }
 
-.button:active {
+.controls button:active {
   background: var(--shade);
 }
 

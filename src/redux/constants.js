@@ -2,6 +2,7 @@ export const ADD_NOTE = 'ADD_NOTE';
 export const CLEAR_SCROLL_ID = 'CLEAR_SCROLL_ID';
 export const CLOSE_SAVE_DIALOG = 'CLOSE_SAVE_DIALOG';
 export const MOVE_NOTE = 'MOVE_NOTE';
+export const MOVE_NOTE_BY_INDEX = 'MOVE_NOTE_BY_INDEX';
 export const REMOVE_NOTE = 'REMOVE_NOTE';
 export const REVERT_NOTE = 'REVERT_NOTE';
 export const SET_NOTES = 'SET_NOTES';

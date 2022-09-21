@@ -3,6 +3,7 @@ import {
   CLEAR_SCROLL_ID,
   CLOSE_SAVE_DIALOG,
   MOVE_NOTE,
+  MOVE_NOTE_BY_INDEX,
   REMOVE_NOTE,
   REVERT_NOTE,
   SET_NOTES,
@@ -56,6 +57,23 @@ export default function reducer(state = defaultState, action) {
       const from = parent.children.findIndex(id => id === action.fromId);
       const to = parent.children.findIndex(id => id === action.toId);
       const children = move(parent.children, from, to);
+      const all = {
+        ...state.all,
+        [parent.id]: {
+          ...parent,
+          children,
+        },
+      };
+
+      saveItem(allKey, all);
+      return {
+        ...state,
+        all,
+      };
+    }
+    case MOVE_NOTE_BY_INDEX: {
+      const parent = state.all[action.parentId];
+      const children = move(parent.children, action.fromIndex, action.toIndex);
       const all = {
         ...state.all,
         [parent.id]: {

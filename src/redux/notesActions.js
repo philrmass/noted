@@ -5,6 +5,7 @@ import {
   CLEAR_SCROLL_ID,
   CLOSE_SAVE_DIALOG,
   MOVE_NOTE,
+  MOVE_NOTE_BY_INDEX,
   REMOVE_NOTE,
   REVERT_NOTE,
   SET_NOTES,
@@ -26,6 +27,10 @@ export function closeSaveDialog() {
 
 export function moveNote(parentId, fromId, toId) {
   return { type: MOVE_NOTE, parentId, fromId, toId };
+}
+
+export function moveNoteByIndex(parentId, fromIndex, toIndex) {
+  return { type: MOVE_NOTE_BY_INDEX, parentId, fromIndex, toIndex };
 }
 
 export function removeNote(parentId, id) {

@@ -11,7 +11,7 @@ const parentIdsKey = 'notedParents';
 const parentScrollsKey = 'notedScrolls';
 
 const defaultState = {
-  editingId: null, //???'645b3d98-71de-4f40-94d3-9ee76cc7c651',
+  editingId: null,
   parentIds: loadItem(parentIdsKey, []),
   parentScrolls: loadItem(parentScrollsKey, []),
   scroll: null,

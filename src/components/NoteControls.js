@@ -38,7 +38,7 @@ export default function NoteControls({ parentId, id, childCount, button }) {
   return (
     <>
       <div className={styles.controls}>
-        <button className={styles.button} onClick={handleRemove}>
+        <button onClick={handleRemove}>
           <Icon name='cross' />
         </button>
         <div className={styles.icon}>

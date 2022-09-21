@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'preact/hooks';
 import { useDispatch, useSelector } from 'react-redux';
 import { editNote } from '../redux/uiActions';
-import { updateNote } from '../redux/notesActions';
+import { moveNoteByIndex, updateNote } from '../redux/notesActions';
 import BigButton from './BigButton';
 import Colors from './Colors';
+import Icon from './Icon';
 import NoteControls from './NoteControls';
 import NoteHandle from './NoteHandle';
 import NoteText from './NoteText';
@@ -17,6 +18,10 @@ export default function Editor() {
   const all = useSelector(state => state.notes.all);
   const editingId = useSelector(state => state.ui.editingId);
   const lastColor = useSelector(state => state.notes.lastColor);
+  const parentIds = useSelector(state => state.ui.parentIds);
+  const parentId = parentIds.findLast((id) => id !== editingId) ?? 'root';
+  const parent = all[parentId];
+  const index = parent.children.findIndex((id) => id === editingId);
   const style = { background: color };
 
   useEffect(() => {
@@ -33,8 +38,15 @@ export default function Editor() {
   };
 
   const buildFirstButton = () => {
-    console.log('first');
-    return null;
+    if (index === 0) {
+      return null;
+    }
+
+    return (
+      <button onClick={() => dis(moveNoteByIndex(parentId, index, 0))}>
+        <Icon name='up' />
+      </button>
+    );
   };
 
   if (showColor) {
